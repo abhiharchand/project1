@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employee Scheduler</h1>
+    <form id="employee-form">
+        <label for="employee-name">Employee Name:</label>
+        <input type="text" id="employee-name" required>
+        
+        <label for="availability">Availability (comma separated days, e.g., Mon, Tue, Wed):</label>
+        <input type="text" id="availability" required>
+        
+        <label for="hours-allowed">Total Hours Allowed per Week:</label>
+        <input type="number" id="hours-allowed" required>
+        
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h2>Generated Schedule</h2>
+    <table id="schedule-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Shift 1 (10am - 5pm)</th>
+                <th>Shift 2 (5pm - 12am)</th>
+            </tr>
+        </thead>
+        <tbody id="schedule-body">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
